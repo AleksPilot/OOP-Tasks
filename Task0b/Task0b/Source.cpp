@@ -11,11 +11,11 @@ bool str_comp(std::pair<std::string, int> a, std::pair<std::string, int> b) {
 int main(int argc, char** argv) {
 	using namespace std;
 	if (argc == 1) {
-		cout << "Args are underfined\n";
+		cout << "Underfined Args\n";
 		return 1;
 	}
 	if (argc == 2) {
-		cout << "No output arg\n";
+		cout << "Required output arg\n";
 		return 1;
 	}
 	string input_file = argv[1];
