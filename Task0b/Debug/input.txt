@@ -1,2 +1,0 @@
-cpp is the best programming language in the world
-haskel is the worst one
