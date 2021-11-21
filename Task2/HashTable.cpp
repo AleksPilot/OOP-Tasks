@@ -23,9 +23,8 @@ bool HashTable::rehash() {
     for(auto it: tmp){
         re.insert(it.first, it.second);
     }
-    *this = re;
-    delete &re;
     tmp.clear();
+    *this = re;
     return true;
 }
 
@@ -34,10 +33,7 @@ HashTable::HashTable(size_t capacity){
     HashTable::size_prop = 0;
     HashTable::data.resize(HashTable::cap);
 }
-HashTable::~HashTable(){
-    HashTable::data.clear();
-    HashTable::data.resize(0);
-}
+HashTable::~HashTable() = default;
 
 HashTable::HashTable(const HashTable &b) {
     *this = b;
@@ -73,7 +69,7 @@ HashTable &HashTable::operator=(HashTable &&b)  noexcept {
 bool operator==(const HashTable& a, const HashTable& b){
 
     if(a.size_prop != b.size_prop || a.data.size() != b.data.size()){
-        return false;
+       return false;
     }
     else{
         for (int i =0; i < a.cap; i++){
@@ -86,7 +82,7 @@ bool operator==(const HashTable& a, const HashTable& b){
                 auto itb = blist.begin();
                 while(ita != alist.end()){
                     if (ita->first != itb->first || ita->second.weight != itb->second.weight ||
-                        ita->second.age != itb->second.age)
+                    ita->second.age != itb->second.age)
                         return false;
                     itb++;
                     ita++;
@@ -111,6 +107,7 @@ void HashTable::swap(HashTable &b) {
 void HashTable::clear() {
     HashTable::data.clear();
     HashTable::data.resize(HashTable::cap);
+    HashTable::size_prop = 0;
 }
 
 bool HashTable::erase(const Key &k) {
@@ -170,7 +167,7 @@ Value  &HashTable::operator[](const Key &k) {
     {
         this->insert(k, {0 , 0});
         std::cout <<"Couldn't find element by key " <<k <<" in hashtable " <<this <<"\nValue is inserted"
-                  <<std::flush;
+        <<std::flush;
         return this->at(k);
     }
 }
@@ -239,6 +236,7 @@ bool HashTable::empty() const {
 }
 
 void HashTable::get_contents(Datalist& v){
+    v.clear();
     for(auto lit: this->data){
         for(auto it = lit.begin(); it != lit.end(); it++){
             v.push_back(std::pair<std::string, Student>(it->first, it->second));
@@ -256,3 +254,4 @@ void HashTable::printHashTable() {
         std::cout << '\n'<< std::flush;
     }
 }
+
