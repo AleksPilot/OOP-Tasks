@@ -2,17 +2,10 @@
 #include "gtest/gtest.h"
 #include <random>
 #include <algorithm>
-#define NAMES_CNT 36
+#define NAMES_CNT 5
 #define FILL_AMOUNT 10
 Key names_dat[NAMES_CNT] = {
-        "s.ivanov","a.tarasov","t.shevchenko","j.nikitina", "o.dmitrova",
-        "m.evgen","r.nazarova","e.krid","e.panasenkoff", "v.jmihenko",
-        "e.kamarov", "v.pupkin", "e.bazarov", "a.dubrovsky", "y.dolgorukov",
-        "j.stathem", "d.jhonson", "o.kirjalov", "v.neumann", "t.klass",
-        "t.kartoshkin", "r.medvedev", "i.musk", "g.rasputin", "n.romanov",
-        "a.kutalev", "j.dark", "a.kristi", "r.raskolnikoff", "a.mozart",
-        "g.kobyakov", "i.bach", "l.beethoven", "a.aboba", "g.richy",
-        "d.vilyov"
+        "i.ivanov", "p.petrov", "s.sidorov", "a.alexandrov", "m.maksimov"
 };
 //Пустая таблица с вместимостью 1
 class HashTable_CreateHT :public ::testing::Test
@@ -129,10 +122,5 @@ TEST_F(Hashtable_FillData, 2HT_test){
 }
 int main(int argc, char** argv){
     testing::InitGoogleTest(&argc, argv);
-//    using namespace std;
-//    list<Key> names_dat_list;
-//    for(int i = 0; i < NAMES_CNT; i++)
-//        names_dat_list.push_back(names_dat[i]);
-
     return RUN_ALL_TESTS();
 }
