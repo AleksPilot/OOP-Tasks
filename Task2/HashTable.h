@@ -1,7 +1,3 @@
-//
-// Created by alex_ on 03.10.2021.
-//
-
 #ifndef TASK2_HASHTABLE_H
 #define TASK2_HASHTABLE_H
 #include<vector>
