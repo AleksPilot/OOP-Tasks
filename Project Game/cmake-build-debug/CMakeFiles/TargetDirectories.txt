@@ -1,0 +1,3 @@
+C:/Users/iivan/CPP_TASKS/Project Game/cmake-build-debug/CMakeFiles/Project_Game.dir
+C:/Users/iivan/CPP_TASKS/Project Game/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iivan/CPP_TASKS/Project Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
