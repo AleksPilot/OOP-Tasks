@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/iivan/CPP_TASKS/Project Game/controller.h
+
+C:/Users/iivan/CPP_TASKS/Project Game/interface.h
+
 C:/Users/iivan/CPP_TASKS/Project Game/main.cpp
 iostream
 -
@@ -13,18 +17,16 @@ string
 -
 algorithm
 -
-vector
--
-time.h
--
 random
--
-iomanip
 -
 map
 -
 model.h
 C:/Users/iivan/CPP_TASKS/Project Game/model.h
+interface.h
+C:/Users/iivan/CPP_TASKS/Project Game/interface.h
+controller.h
+C:/Users/iivan/CPP_TASKS/Project Game/controller.h
 
 C:/Users/iivan/CPP_TASKS/Project Game/model.h
 

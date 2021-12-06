@@ -91,12 +91,9 @@ public:
     }
     void print() {
         std::map<string, int>::iterator it;
-        cout.width(5);
         for (it=value.begin(); it != value.end(); it++) {
             cout.width(5);
-            cout << it->first << ' ';
-            cout.width(2);
-            cout << it->second << "\n";
+            cout << it->second << "";
         }
     }
 };
