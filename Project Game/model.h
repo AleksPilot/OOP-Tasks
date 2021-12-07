@@ -96,8 +96,12 @@ public:
             cout << it->second << "";
         }
     }
+
+    bool wincondition(){
+        if (value.find("bull")->second == 4)
+            return true;
+        else
+            return false;
+    }
 };
 
-class TableInitiate{
-
-};

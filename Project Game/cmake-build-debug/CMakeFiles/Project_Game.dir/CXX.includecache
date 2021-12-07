@@ -7,8 +7,14 @@
 #IncludeRegexTransform: 
 
 C:/Users/iivan/CPP_TASKS/Project Game/controller.h
+interface.h
+C:/Users/iivan/CPP_TASKS/Project Game/interface.h
 
 C:/Users/iivan/CPP_TASKS/Project Game/interface.h
+conio.h
+-
+model.h
+C:/Users/iivan/CPP_TASKS/Project Game/model.h
 
 C:/Users/iivan/CPP_TASKS/Project Game/main.cpp
 iostream
@@ -21,10 +27,6 @@ random
 -
 map
 -
-model.h
-C:/Users/iivan/CPP_TASKS/Project Game/model.h
-interface.h
-C:/Users/iivan/CPP_TASKS/Project Game/interface.h
 controller.h
 C:/Users/iivan/CPP_TASKS/Project Game/controller.h
 

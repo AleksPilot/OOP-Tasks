@@ -3,8 +3,6 @@
 #include <algorithm>
 #include <random>
 #include <map>
-#include "model.h"
-#include "interface.h"
 #include "controller.h"
 
 using namespace std;
@@ -14,7 +12,7 @@ using namespace std;
 
 
 int main() {
-    number a, b;
+    /*number a, b;
     a.reset();
     b.reset();
     a.generate();
@@ -26,7 +24,8 @@ int main() {
     number c;
     cout << c.easy_search(a, 1, 1) << '\n';
     temp = temp.checkout(a, b);
-    temp.print();
+    temp.print();*/
+    start();
 
     return 0;
 }
