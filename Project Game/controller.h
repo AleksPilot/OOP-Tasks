@@ -1,4 +1,5 @@
 #include "interface.h"
+#include <conio.h>
 //#include "model.h"
 
 
@@ -9,6 +10,7 @@ void ai(){
 
     number created;
     created.generate();
+    //created.print();
     cin >> move;
     i = 2;
     number converted_move = converted_move.convert(move);
@@ -16,11 +18,15 @@ void ai(){
     game_table journal;
     journal.clear();
     numValue check;
+    check.init();
     char c;
-    check.checkout(created, converted_move);
+    cout << '\n';
+    check = check.checkout(created, converted_move);
     while (!check.wincondition()){
+
         journal.make_a_move(check);
         journal.show();
+        check.init();
         c = getch();
         if (c == 81)
         {
@@ -38,21 +44,96 @@ void ai(){
         cin >> move;
         number converted_move = converted_move.convert(move);
         announce_ai(i);
-        check.checkout(created, converted_move);
-
+        check = check.checkout(created, converted_move);
     }
     i = 3;
     announce_ai(i);
+    i = 5;
+    announce_ai(i);
+    c = getch();
     if (c == 89) {
-        i = 5;
-        announce_ai(i);
         start();
     }
     else if (c == 78)
         ai();
 }
 
-void player_mode(){}
+void multiplayer_mode(){
+    int i = 1;
+    announce_multiplayer(i);
+    int move;
+    int num;
+    cin >> num;
+    i = 2;
+    announce_multiplayer(i);
+    char e;
+    cin >> e;
+    if (e == 'N')
+    {
+        multiplayer_mode();
+    }
+    number created;
+    created = created.convert(num);
+    i = 3;
+    announce_multiplayer(i);
+    //created.print();
+    cin >> move;
+    i = 4;
+    number converted_move = converted_move.convert(move);
+    announce_multiplayer(i);
+    game_table journal;
+    journal.clear();
+    numValue check;
+    check.init();
+    char c;
+    cout << '\n';
+    check = check.checkout(created, converted_move);
+    while (!check.wincondition()){
+
+        journal.make_a_move(check);
+        journal.show();
+        check.init();
+        c = getch();
+        /*if (c == 81)
+        {
+            i = 6;
+            announce_ai(i);
+            c = getch();
+            if (c == 89) {
+                i = 10;
+                announce_ai(i);
+                start();
+            }
+            else if (c == 78)
+                continue;
+        }*/
+        cin >> move;
+        number converted_move = converted_move.convert(move);
+        announce_multiplayer(i);
+        check = check.checkout(created, converted_move);
+        if (journal.journal.size() == 8)
+        {
+            i = 8;
+            announce_multiplayer(i);
+        }
+        if (journal.journal.size() == 9)
+        {
+            i = 9;
+            break;
+        }
+    }
+    if (i != 9)
+        i = 5;
+    announce_multiplayer(i);
+    i = 7;
+    announce_multiplayer(i);
+    c = getch();
+    if (c == 89) {
+        start();
+    }
+    else if (c == 78)
+        multiplayer_mode();
+}
 
 
 
@@ -76,7 +157,11 @@ void start(){
             if (c == 32)
                 start();
             break;
+        case 52:
+            system("cls");
+            start();
         default:
             c = getch();
+            start();
     }
 }

@@ -16,6 +16,7 @@ public:
             cout << i << ' ';
             it->second.print();
             i++;
+            cout << '\n';
         }
         cout << '\n';
     }
@@ -32,7 +33,7 @@ void start();
 
 void ai();
 
-void player_mode();
+void multiplayer_mode();
 
 void menu();
 
@@ -48,24 +49,22 @@ void chosing_mode(){
             ai();
             break;
         case 50:
-            player_mode();
+            multiplayer_mode();
             break;
         case 51:
-            menu();
+            start();
             break;
         default:
-            ;
+            chosing_mode();
     }
 }
 
 void rules(){
     system(std::string("start https://metaschool.ru/pub/games/bulls-and-cows/bulls.php").c_str());
-    cout << "press enter to go back to menu\n";
+    cout << "press any key to go back to menu\n";
     char c;
     c = getch();
-    if (c == 32)
-        menu();
-    c = getch();
+    start();
 }
 
 void menu() {
@@ -73,7 +72,7 @@ void menu() {
     char c;
     c = getch();
     if (c)
-        cout << "Main Menu \n 1.Choose mode \n 2.Rules and tips \n 3.About author\n";
+        cout << "Main Menu \n 1.Choose mode \n 2.Rules and tips \n 3.About author\n 4.Clear console \n";
 }
 
 void author() {
@@ -81,8 +80,7 @@ void author() {
     cout << "press enter to go back to menu\n";
     char c;
     c = getch();
-    if (c == 32)
-        menu();
+    start();
 }
 
 
@@ -111,4 +109,39 @@ void announce_ai(int n){
     }
 }
 
+void announce_multiplayer(int n){
+    switch (n)
+    {
+        case 1:
+            cout << "1st player is thinking about the number\n";
+            break;
+        case 2:
+            cout << "Are you sure?(Y/N)\n";
+            break;
+        case 3:
+            cout << "Number recorded!\n\n\n\n\n\n\n\n\n\n\n2nd player may have their first turn\n";
+            break;
+        case 4:
+            cout << "Turn recorded! Showing result...\n";
+            break;
+        case 5:
+            cout << "2nd player won!\n";
+            break;
+        case 6:
+            cout << "Are you really want to leave? The progress of current game won't save! (PRESS Y TO LEAVE OR N TO STAY)\n";
+            break;
+        case 7:
+            cout << "Returning to menu? Y/N\n";
+            break;
+        case 8:
+            cout << "There is only one try!\n";
+            break;
+        case 9:
+            cout << "1st player win. Number of tries is ended\n";
+            break;
+        default:
+            cout << "Leaving to menu....\n";
+            break;
+    }
+}
 

@@ -17,6 +17,8 @@ public:
         for (int i = 0; i < 4; ++i) {
             digit[i] = (rand() % 10);
         };
+        if (digit[0]==0)
+            generate();
     }
 
     void print()
@@ -37,6 +39,8 @@ public:
         }
         catch (int a){
             std::cerr << "\nCaught exception '" << a << "': invalid int for converting" << '\n';
+            result.reset();
+            return result;
         }
         int i = 3;
         while (n){
@@ -93,7 +97,7 @@ public:
         std::map<string, int>::iterator it;
         for (it=value.begin(); it != value.end(); it++) {
             cout.width(5);
-            cout << it->second << "";
+            cout << it->second << " ";
         }
     }
 
@@ -103,5 +107,6 @@ public:
         else
             return false;
     }
+
 };
 
