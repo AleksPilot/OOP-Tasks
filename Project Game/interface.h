@@ -6,25 +6,36 @@ using namespace std;
 class game_table{
 public:
     vector<pair<int, numValue>> journal;
+    vector<number> turns;
     void show(){
         vector<pair<int, numValue>>::iterator it;
-        cout.width(11);
-        cout << " num of try " << " bull " << " cow " << " miss\n";
+        cout.width(5);
+        cout << "  num of try  bull   cow  miss       number\n";
         int i = 1;
+        vector<number>::iterator it2;
+        it2 = turns.begin();
         for (it = journal.begin(); it < journal.end(); ++it) {
             cout.width(11);
             cout << i << ' ';
             it->second.print();
+            cout.width(8);
+
+
+
+
             i++;
-            cout << '\n';
+            it2->print();
+            it2++;
         }
         cout << '\n';
     }
-    void make_a_move(numValue new_turn){
+    void make_a_move(numValue new_turn, number move){
         journal.push_back(pair<int, numValue> {journal.size(), new_turn});
+        turns.push_back(move);
     }
     void clear(){
         journal.clear();
+        turns.clear();
     }
 
 };

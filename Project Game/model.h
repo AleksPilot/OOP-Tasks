@@ -51,6 +51,15 @@ public:
         return result;
     }
 
+    int fwd_conv()
+    {
+        int summ = 0;
+        for (int i = 0; i < 4; ++i) {
+            summ+=digit[i]^10;
+        }
+        return summ;
+    }
+
     string easy_search(number a, int n, int standing)
     {
         string result = "miss";

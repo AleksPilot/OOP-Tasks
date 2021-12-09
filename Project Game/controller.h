@@ -22,10 +22,10 @@ void ai(){
     char c;
     cout << '\n';
     check = check.checkout(created, converted_move);
+    journal.make_a_move(check, converted_move);
+    journal.show();
     while (!check.wincondition()){
 
-        journal.make_a_move(check);
-        journal.show();
         check.init();
         c = getch();
         if (c == 81)
@@ -45,6 +45,8 @@ void ai(){
         number converted_move = converted_move.convert(move);
         announce_ai(i);
         check = check.checkout(created, converted_move);
+        journal.make_a_move(check, converted_move);
+        journal.show();
     }
     i = 3;
     announce_ai(i);
@@ -88,29 +90,19 @@ void multiplayer_mode(){
     char c;
     cout << '\n';
     check = check.checkout(created, converted_move);
+    journal.make_a_move(check, converted_move);
+    journal.show();
     while (!check.wincondition()){
 
-        journal.make_a_move(check);
-        journal.show();
         check.init();
         c = getch();
-        /*if (c == 81)
-        {
-            i = 6;
-            announce_ai(i);
-            c = getch();
-            if (c == 89) {
-                i = 10;
-                announce_ai(i);
-                start();
-            }
-            else if (c == 78)
-                continue;
-        }*/
+
         cin >> move;
         number converted_move = converted_move.convert(move);
         announce_multiplayer(i);
         check = check.checkout(created, converted_move);
+        journal.make_a_move(check, converted_move);
+        journal.show();
         if (journal.journal.size() == 8)
         {
             i = 8;
