@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libwf.a CMakeFiles/wf.dir/workflow/Factory.cpp.obj
+C:\MinGW\bin\ranlib.exe libwf.a

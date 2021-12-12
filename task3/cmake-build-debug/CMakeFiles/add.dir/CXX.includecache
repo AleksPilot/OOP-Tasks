@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/iivan/CPP_TASKS/task3/addons/block_append.cpp
+block_append.h
+C:/Users/iivan/CPP_TASKS/task3/addons/block_append.h
+
+C:/Users/iivan/CPP_TASKS/task3/addons/block_append.h
+../workflow/workshop/Bench.h
+C:/Users/iivan/CPP_TASKS/task3/workflow/workshop/Bench.h
+
+C:/Users/iivan/CPP_TASKS/task3/workflow/workshop/Bench.h
+string
+-
+list
+-
+iostream
+-
+fstream
+-
+sstream
+-
+cstdarg
+-
+typeinfo
+-
+vector
+-
+algorithm
+-
+

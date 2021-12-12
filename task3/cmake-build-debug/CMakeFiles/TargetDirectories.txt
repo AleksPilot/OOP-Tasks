@@ -1,0 +1,8 @@
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/cfg.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/ws.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/wf.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/bs.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/add.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/iivan/CPP_TASKS/task3/cmake-build-debug/CMakeFiles/task3.dir

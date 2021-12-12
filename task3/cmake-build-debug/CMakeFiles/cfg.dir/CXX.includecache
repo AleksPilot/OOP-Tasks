@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/iivan/CPP_TASKS/task3/workflow/configuration/Config.cpp
+Config.h
+C:/Users/iivan/CPP_TASKS/task3/workflow/configuration/Config.h
+
+C:/Users/iivan/CPP_TASKS/task3/workflow/configuration/Config.h
+string
+-
+vector
+-
+list
+-
+fstream
+-
+iostream
+-
+sstream
+-
+

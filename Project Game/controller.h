@@ -82,6 +82,7 @@ void multiplayer_mode(){
     cin >> move;
     i = 4;
     number converted_move = converted_move.convert(move);
+
     announce_multiplayer(i);
     game_table journal;
     journal.clear();
@@ -157,3 +158,4 @@ void start(){
             start();
     }
 }
+

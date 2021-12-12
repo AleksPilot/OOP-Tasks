@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libcfg.a CMakeFiles/cfg.dir/workflow/configuration/Config.cpp.obj
+C:\MinGW\bin\ranlib.exe libcfg.a

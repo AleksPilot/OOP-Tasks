@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libws.a CMakeFiles/ws.dir/workflow/workshop/Bench.cpp.obj
+C:\MinGW\bin\ranlib.exe libws.a
