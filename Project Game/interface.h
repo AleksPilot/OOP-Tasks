@@ -19,10 +19,6 @@ public:
             cout << i << ' ';
             it->second.print();
             cout.width(8);
-
-
-
-
             i++;
             it2->print();
             it2++;
@@ -79,7 +75,7 @@ void rules(){
 }
 
 void menu() {
-    cout << "Welcome to Bulls & Cows Game! \n Press any key to continue\n";
+    cout << "Welcome to Bulls & Cows Game! \n Press ENTER to continue\n";
     char c;
     c = getch();
     if (c)
@@ -101,7 +97,7 @@ void announce_ai(int n){
     switch (n)
     {
         case 1:
-            cout << "Computer is generating a number...Generated (EXIT IS Q) \n Make your first turn\n";
+            cout << "Computer is generating a number...Generated \n Make your first turn\n";
             break;
         case 2:
             cout << "Turn recorded! Showing result...\n";

@@ -53,11 +53,7 @@ public:
 
     int fwd_conv()
     {
-        int summ = 0;
-        for (int i = 0; i < 4; ++i) {
-            summ+=digit[i]^10;
-        }
-        return summ;
+        return digit[0]*1000+digit[1]*100+digit[2]*10+digit[3];
     }
 
     string easy_search(number a, int n, int standing)

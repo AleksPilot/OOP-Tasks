@@ -13,7 +13,15 @@ void ai(){
     //created.print();
     cin >> move;
     i = 2;
+    if (!(cin >> move)){
+        throw exception();
+    }
     number converted_move = converted_move.convert(move);
+    while (converted_move.fwd_conv() != move)
+    {
+        cin >> move;
+        converted_move = converted_move.convert(move);
+    }
     announce_ai(i);
     game_table journal;
     journal.clear();
@@ -27,22 +35,16 @@ void ai(){
     while (!check.wincondition()){
 
         check.init();
-        c = getch();
-        if (c == 81)
-        {
-            i = 4;
-            announce_ai(i);
-            c = getch();
-            if (c == 89) {
-                i = 5;
-                announce_ai(i);
-                start();
-            }
-            else if (c == 78)
-                continue;
-        }
         cin >> move;
+        if (!(cin >> move)){
+            throw exception();
+        }
         number converted_move = converted_move.convert(move);
+        while (converted_move.fwd_conv() != move)
+        {
+            cin >> move;
+            converted_move = converted_move.convert(move);
+        }
         announce_ai(i);
         check = check.checkout(created, converted_move);
         journal.make_a_move(check, converted_move);
@@ -66,6 +68,9 @@ void multiplayer_mode(){
     int move;
     int num;
     cin >> num;
+    if (!(cin >> move)){
+        throw exception();
+    }
     i = 2;
     announce_multiplayer(i);
     char e;
@@ -80,9 +85,16 @@ void multiplayer_mode(){
     announce_multiplayer(i);
     //created.print();
     cin >> move;
+    if (!(cin >> move)){
+        throw exception();
+    }
     i = 4;
     number converted_move = converted_move.convert(move);
-
+    while (converted_move.fwd_conv() != move)
+    {
+        cin >> move;
+        converted_move = converted_move.convert(move);
+    }
     announce_multiplayer(i);
     game_table journal;
     journal.clear();
@@ -96,10 +108,15 @@ void multiplayer_mode(){
     while (!check.wincondition()){
 
         check.init();
-        c = getch();
+       // c = getch();
 
         cin >> move;
         number converted_move = converted_move.convert(move);
+        while (converted_move.fwd_conv() != move)
+        {
+            cin >> move;
+            converted_move = converted_move.convert(move);
+        }
         announce_multiplayer(i);
         check = check.checkout(created, converted_move);
         journal.make_a_move(check, converted_move);
