@@ -145,6 +145,98 @@ void multiplayer_mode(){
         multiplayer_mode();
 }
 
+void complexed_ai_mode(){
+    int i = 1;
+    announce_comp(i);
+    int move;
+    int num;
+    cin >> num;
+    if (!(cin >> move)){
+        throw exception();
+    }
+    i = 2;
+    announce_comp(i);
+    char e;
+    cin >> e;
+    if (e == 'N')
+    {
+        complexed_ai_mode();
+    }
+    number created;
+    created = created.convert(num);
+    i = 3;
+    announce_comp(i);
+    number comp_created;
+    comp_created.generate();
+    //created.print();
+    cin >> move;
+    if (!(cin >> move)){
+        throw exception();
+    }
+    i = 4;
+    number converted_move = converted_move.convert(move);
+    ai_guessing guess;
+    guess.init();
+    number comp_move = guess.make_a_random_move();
+    while (converted_move.fwd_conv() != move)
+    {
+        cin >> move;
+        converted_move = converted_move.convert(move);
+    }
+    announce_comp(i);
+    game_table player_journal;
+    game_table ai_journal;
+    player_journal.clear();
+    ai_journal.clear();
+    numValue player_check;
+    numValue ai_check;
+    ai_check.init();
+    player_check.init();
+    char c;
+    cout << '\n';
+    player_check = player_check.checkout(comp_created, converted_move);
+    player_journal.make_a_move(player_check, converted_move);
+    player_journal.show();
+    ai_check = ai_check.checkout(created, comp_move);
+    ai_journal.make_a_move(ai_check, comp_move);
+    ai_journal.show();
+    while (!player_check.wincondition() || !ai_check.wincondition()){
+
+        player_check.init();
+        // c = getch();
+        cin >> move;
+        number converted_move = converted_move.convert(move);
+        while (converted_move.fwd_conv() != move)
+        {
+            cin >> move;
+            converted_move = converted_move.convert(move);
+        }
+        announce_multiplayer(i);
+        comp_move = guess.make_a_random_move();
+        player_check = player_check.checkout(comp_move, converted_move);
+        player_journal.make_a_move(player_check, converted_move);
+        player_journal.show();
+        ai_check = ai_check.checkout(created, comp_move);
+        ai_journal.make_a_move(ai_check, comp_move);
+        ai_journal.show();
+    }
+    if (player_check.wincondition()) {
+        i = 5;
+        announce_comp(i);
+    }
+    else{
+        i = 9;
+        announce_comp(i);
+    }
+    i = 7;
+    announce_comp(i);
+    c = getch();
+    if (c == 89) {
+        start();
+    }
+    else if (c == 78)
+        complexed_ai_mode();
+}
 
 
 void start(){

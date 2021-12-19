@@ -269,6 +269,12 @@ public:
         return produce(hypothesis);
 
     }
+    number make_a_random_move(){
+        srand(time(NULL));
+        int temp = ((rand() % 9000) + 1000);
+        number result;
+        return result.convert(temp);
+    }
 
 };
 

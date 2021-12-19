@@ -121,3 +121,35 @@ void announce_multiplayer(int n){
     }
 }
 
+void announce_comp(int n){
+    switch (n)
+    {
+        case 1:
+            cout << "1st player is thinking about the number\n";
+            break;
+        case 2:
+            cout << "Are you sure?(Y/N)\n";
+            break;
+        case 3:
+            cout << "Number recorded!\n\n\n\n\n\n\n\n\n\n\nComputer generates its number....Ready!\n You may start with your first turn";
+            break;
+        case 4:
+            cout << "Turn recorded! Computer moves... Showing result...\n";
+            break;
+        case 5:
+            cout << "Player won!\n";
+            break;
+        case 6:
+            cout << "Are you really want to leave? The progress of current game won't save! (PRESS Y TO LEAVE OR N TO STAY)\n";
+            break;
+        case 7:
+            cout << "Returning to menu? Y/N\n";
+            break;
+        case 9:
+            cout << "PC win!\n";
+            break;
+        default:
+            cout << "Leaving to menu....\n";
+            break;
+    }
+}
