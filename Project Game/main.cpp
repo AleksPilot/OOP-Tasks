@@ -13,6 +13,9 @@ using namespace std;
 
 int main() {
     start();
+    /*ai_guessing fst;
+    fst.init();
+    fst.make_a_move().print();*/
 
     return 0;
 }
