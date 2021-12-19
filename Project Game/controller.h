@@ -151,9 +151,9 @@ void complexed_ai_mode(){
     int move;
     int num;
     cin >> num;
-    if (!(cin >> move)){
+    /*if (!(cin >> move)){
         throw exception();
-    }
+    }*/
     i = 2;
     announce_comp(i);
     char e;
@@ -168,6 +168,8 @@ void complexed_ai_mode(){
     announce_comp(i);
     number comp_created;
     comp_created.generate();
+    comp_created.print();
+    created.print();
     //created.print();
     cin >> move;
     if (!(cin >> move)){
@@ -200,7 +202,7 @@ void complexed_ai_mode(){
     ai_check = ai_check.checkout(created, comp_move);
     ai_journal.make_a_move(ai_check, comp_move);
     ai_journal.show();
-    while (!player_check.wincondition() || !ai_check.wincondition()){
+    while (!player_check.wincondition() && !ai_check.wincondition()){
 
         player_check.init();
         // c = getch();
