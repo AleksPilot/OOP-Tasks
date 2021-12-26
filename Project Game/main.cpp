@@ -12,8 +12,8 @@ using namespace std;
 
 
 int main() {
-    //start();
-    complexed_ai_mode();
+    start();
+    //complexed_ai_mode();
 
     return 0;
 }
