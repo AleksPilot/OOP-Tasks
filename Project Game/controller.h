@@ -6,7 +6,6 @@ void chosing_mode(){
     cout << "Mode \n 1. vs AI \n 2. vs Player \n 3. Back \n";
     char c;
     c = getch();
-    c = getch();
     switch (c) {
         case 49:
             ai();
