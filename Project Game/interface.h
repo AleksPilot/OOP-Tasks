@@ -14,25 +14,7 @@ void menu();
 
 void author();
 
-void chosing_mode(){
-    cout << "Mode \n 1. vs AI \n 2. vs Player \n 3. Back \n";
-    char c;
-    c = getch();
-    c = getch();
-    switch (c) {
-        case 49:
-            ai();
-            break;
-        case 50:
-            multiplayer_mode();
-            break;
-        case 51:
-            start();
-            break;
-        default:
-            chosing_mode();
-    }
-}
+
 
 void rules(){
     system(std::string("start https://metaschool.ru/pub/games/bulls-and-cows/bulls.php").c_str());
